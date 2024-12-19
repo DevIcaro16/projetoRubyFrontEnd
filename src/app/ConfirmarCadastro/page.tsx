@@ -51,7 +51,7 @@ export default function ConfirmarCadastro() {
   const token = searchParams.get('token');
   const [tokenData, setTokenData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<any>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [result, setResult] = useState<boolean>(false);
   const [result2, setResult2] = useState<boolean>(false);
@@ -97,6 +97,7 @@ export default function ConfirmarCadastro() {
       // Quando o token está disponível, faça a requisição para verificar o token
       const verifyToken = async () => {
         try {
+
           const response = await axios.post('https://projeto-ruby-back-end.vercel.app/verificarToken', { token });
           if (response.data.valid) {
             setTokenData(response.data.decoded); // Armazena os dados decodificados
@@ -759,6 +760,7 @@ export default function ConfirmarCadastro() {
                 </label><br />
 
                 <input
+                  title="valorPago"
                   type="text"
                   value={valorPago}
                   disabled

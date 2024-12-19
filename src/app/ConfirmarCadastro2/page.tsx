@@ -50,7 +50,7 @@ export default function ConfirmarCadastro2() {
       const token = searchParams.get('token');
       const [tokenData, setTokenData] = useState<any>(null);
       const [loading, setLoading] = useState(true);
-      const [error, setError] = useState<string | null>(null);
+      const [error, setError] = useState<any>("");
       const [isLoading, setIsLoading] = useState<boolean>(false);
       const [result, setResult] = useState<boolean>(false);
       const [result2, setResult2] = useState<boolean>(false);

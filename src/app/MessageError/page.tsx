@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./page.module.scss";
 
-const MessageError = () => {
+export default function MessageError ()  {
     return (
         <div className={styles.container}>
             <div className={styles.card}>
@@ -31,4 +31,3 @@ const MessageError = () => {
     );
 };
 
-export default MessageError;
