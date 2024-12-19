@@ -9,7 +9,6 @@ import styles from "./page.module.scss";
 // };
 
 export default function CheckEmail (valor: string, qrCode: string, qrCodeImg: string, link: string) {
-
     return (
         <div className={styles.container}>
             <div className={styles.card}>

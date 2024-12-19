@@ -559,6 +559,7 @@ export default function ConfirmarCadastro2() {
 
       {result && (
         <div className={styles.resultContainer}>
+
           <CheckEmail
             valor={valorPix}
             qrCode={qrCodePix}

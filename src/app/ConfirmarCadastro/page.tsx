@@ -6,7 +6,6 @@ import { Eye, EyeOff } from "lucide-react";
 import axios from "axios";
 import jwt from "jsonwebtoken";
 import { config } from "dotenv"; // Para carregar variáveis de ambiente
-import Modal from "react-modal";
 import styles from "./page.module.scss";
 import logoImg from "/public/RUBY9.png";
 import Image from "next/image"; 
@@ -19,6 +18,7 @@ import LoadingSpinner from "../LoadingSpinner/page";
 import MessageError from "../MessageError/page";
 import InputPassword from "../components/InputPassword";
 import CheckPagamento from "../CheckPagamento/page";
+import { Modal } from "@nextui-org/react";
 
 export default function ConfirmarCadastro() {
 
@@ -705,9 +705,8 @@ export default function ConfirmarCadastro() {
 
           <Modal
             isOpen={isModalOpen}
-            onRequestClose={() => setIsModalOpen(false)}
+            onClose={() => setIsModalOpen(false)}
             className={styles.modalContent}
-            overlayClassName={styles.modalOverlay}
           >
             <h2 className={styles.h2}>Confirme seu Plano</h2>
 
