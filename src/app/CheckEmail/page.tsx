@@ -2,13 +2,13 @@ import React from "react";
 import styles from "./page.module.scss";
 
 interface CheckEmailProps {
-    valor: any;
-    qrCode: any;
-    qrCodeImg: any;
-    link: any
+    valor: string;
+    qrCode: string;
+    qrCodeImg: string;
+    link: string
 };
 
-const CheckEmail = ({ valor, qrCode, qrCodeImg, link }: CheckEmailProps) => {
+export default function CheckEmail ({ valor, qrCode, qrCodeImg, link }: CheckEmailProps) {
     return (
         <div className={styles.container}>
             <div className={styles.card}>
@@ -57,4 +57,3 @@ const CheckEmail = ({ valor, qrCode, qrCodeImg, link }: CheckEmailProps) => {
     );
 };
 
-export default CheckEmail;
