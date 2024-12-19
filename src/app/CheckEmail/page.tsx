@@ -6,6 +6,7 @@ interface CheckEmailProps {
     qrCode: string;
     qrCodeImg: string;
     link: string;
+    [key: string]: any;
 }
 
 const CheckEmail: React.FC<CheckEmailProps> = ({ valor, qrCode, qrCodeImg, link }) => {
