@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #FFF;
+  --black: #000;
+  --blue: rgb(4, 123, 235);
+  --gray-100: #8a8a8a;
+  --gray-200: #d4d2d2;
+  --primary-color: #2dca32;
+  --secondary-color: #f5f5f5;
+  --text-color: #333;
+  --input-border: #aca9a9;
+  --input-border-focus: var(--primary-color);
+  --button-bg: var(--primary-color);
+  --button-text: #fff;
+  --error-color: #ff5252;
+}
+
+
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-rendering: none;
+
+}
+
+body {
+  background: var(--white);
+}
+
+body,
+input,
+textarea,
+select,
+button,
+a {
+  font: 400, 1rem sans-serif;
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}

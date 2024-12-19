@@ -1,0 +1,328 @@
+
+
+.containerCenter {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+}
+
+.loginForm {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 800px;
+}
+
+.p {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
+
+.img {
+  margin: -50px 0px 10px 0px;
+  width: 25%;
+  height: 25%;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+// .input{
+//   width: 100%;
+//   padding: 40px;
+//   border: 1px solid var(--input-border);
+//   border-radius: 5px;
+//   outline: none;
+//   transition: border-color 0.3s ease;
+//   font-size: 1rem;
+// }
+
+.button {
+  width: 100%;
+  padding: 10px 15px;
+  background: var(--blue);
+  color: var(--button-text);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover{
+    background-color: var(--primary-color);
+  }
+}
+
+
+.modalContent {
+  width: 500px;
+  height: 450px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1000;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+
+.input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.input:focus, .textarea:focus {
+  border-color: var(--input-border-focus);
+}
+
+
+
+.input2 {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--gray-100);
+  padding: 0px 16px;
+  border-radius: 8px;
+  background-color: var(--gray-200);
+  font-size: 18px;
+}
+
+.input3 {
+  font-family: sans-serif;
+  width: 205%;
+  height: 40px;
+  border: 1px solid var(--gray-100);
+  padding: 0px 16px;
+  border-radius: 8px;
+  background-color: var(--gray-200);
+  font-size: 18px;
+  resize: none;
+}
+
+.select {
+  width: 200px;
+  height: 40px;
+  border: 1px solid var(--gray-100);
+  padding: 0px 16px;
+  border-radius: 8px;
+  background-color: var(--white);
+  font-size: 18px;
+}
+
+.confirmButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resultContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1 {
+  color: #10d82a;
+}
+
+.h1 {
+    font-size: 32px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    color: #000000;
+    margin: -32px 0px 20px 0px;
+    padding: 8px 0px;
+}
+
+.calcButton {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.calcContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -10px;
+}
+
+.selectContainer {
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.valorApagarContainer label {
+  display: flex;
+  margin-bottom: -5px;
+
+
+}
+
+.valorApagarContainer input {
+  width: 43%;
+}
+
+
+@media (max-width: 768px) {
+
+  .img {
+    margin: -25px 0px 10px 0px;
+    width: 50%;
+    height: 50%;
+  }
+
+  .loginForm{
+    display: flex;
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    width: 100%;
+  }
+
+  .button {
+    grid-column: span 1;
+    /* Botão se ajusta em telas pequenas */
+  }
+
+  .fieldGroup {
+    width: 100%; /* Faz o campo ocupar toda a largura do container */
+    max-width: 400px; /* Opcional: Define um tamanho máximo */
+  }
+
+  .input,
+  .input3{
+    margin: 0px auto;
+    width: 100%;
+  }
+
+  .input3{
+    height: 48px;
+  }
+
+  .login {
+    margin-top: -16px;
+    width: 90%;
+  }
+
+  .p {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    color: #000000;
+    margin-top: -32px;
+    margin-bottom: 24px;
+    padding: 8px 0px;
+    font-size: 18px;
+  }
+
+
+
+  .modalContent {
+    max-width: 300px;
+    height: 610px;
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .dataContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .calcContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .select{
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  .calcButton {
+    margin-top: 16px;
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .valorApagarContainer input {
+    width: 100%;
+  }
+
+}
