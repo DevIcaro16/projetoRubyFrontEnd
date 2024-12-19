@@ -14,7 +14,7 @@ import Link from "next/link";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import InputDate from "../components/inputDate";
-import CheckEmail from "../CheckEmail/page";
+import CheckEmail from "../components/CheckEmail";
 import LoadingSpinner from "../LoadingSpinner/page";
 import MessageError from "../MessageError/page";
 import InputPassword from "../components/InputPassword";

@@ -52,6 +52,7 @@ export default function InputDate({ initialValue, onDateChange }: InputDateProps
     <div className={styles.inputDateContainer}>
       {/* Input de mês/ano */}
       <input
+        title='date'
         type="text"
         value={monthYear}
         readOnly
