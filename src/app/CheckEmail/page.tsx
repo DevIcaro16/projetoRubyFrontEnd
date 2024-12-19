@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./page.module.scss";
 
-// interface CheckEmailProps {
-//     valor: string;
-//     qrCode: string;
-//     qrCodeImg: string;
-//     link: string
-// };
+interface CheckEmailProps {
+    valor: string;
+    qrCode: string;
+    qrCodeImg: string;
+    link: string;
+}
 
-export default function CheckEmail (valor: string, qrCode: string, qrCodeImg: string, link: string) {
+const CheckEmail: React.FC<CheckEmailProps> = ({ valor, qrCode, qrCodeImg, link }) => {
     return (
         <div className={styles.container}>
             <div className={styles.card}>
@@ -57,3 +57,4 @@ export default function CheckEmail (valor: string, qrCode: string, qrCodeImg: st
     );
 };
 
+export default CheckEmail;
