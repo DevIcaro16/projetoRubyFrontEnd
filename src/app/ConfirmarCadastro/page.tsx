@@ -18,7 +18,8 @@ import LoadingSpinner from "../LoadingSpinner/page";
 import MessageError from "../MessageError/page";
 import InputPassword from "../components/InputPassword";
 import CheckPagamento from "../CheckPagamento/page";
-import { Modal } from "@nextui-org/react";
+import Modal from "react-modal";
+// import { Modal } from "@nextui-org/react";
 
 export default function ConfirmarCadastro() {
 
@@ -107,7 +108,7 @@ export default function ConfirmarCadastro() {
             const {
               EMP,
               DES,
-              CGC,
+              CGC, 
               EDR,
               BAI,
               CID,
@@ -229,6 +230,7 @@ export default function ConfirmarCadastro() {
       toast.error("As senhas não conferem!", { position: "top-right", autoClose: 3000 });
     } else {
       setIsModalOpen(true);
+      // console.log("modal");
     }
   };
 
@@ -706,9 +708,9 @@ export default function ConfirmarCadastro() {
 
           <Modal
             isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-            aria-labelledby="modal-title"
+            onRequestClose={() => setIsModalOpen(false)}
             className={styles.modalContent}
+            overlayClassName={styles.modalOverlay}
           >
             <h2 className={styles.h2}>Confirme seu Plano</h2>
 
