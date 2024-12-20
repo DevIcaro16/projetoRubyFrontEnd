@@ -77,14 +77,15 @@
 
 
 .modalContent {
-  width: 500px;
-  height: 450px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  position: relative;
-  z-index: 1000;
+  width: 500px; /* Largura do modal */
+  height: 450px; /* Altura do modal */
+  padding: 20px; /* Espaçamento interno */
+  background: #fff; /* Cor de fundo do modal */
+  border-radius: 8px; /* Bordas arredondadas */
+  position: relative; /* Garantindo que o modal tenha uma posição relativa */
+  z-index: 1050; /* Garantir que o modal sobreponha os outros elementos */
 }
+
 
 .modalOverlay {
   position: fixed;
