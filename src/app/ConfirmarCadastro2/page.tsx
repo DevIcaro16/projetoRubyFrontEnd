@@ -63,7 +63,7 @@ export default function ConfirmarCadastro2() {
       async function fetchAndProcessTXT() {
         try {
           // Faz a requisição GET para obter o arquivo TXT
-          const response = await axios.get("http://micromoney.com.br/ruby/dados/rub_pla.php");
+          const response = await axios.get("https://micromoney.com.br/ruby/dados/rub_pla.php");
           const data = response.data;
     
           // Extração dos valores usando expressões regulares
