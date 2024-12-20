@@ -47,8 +47,8 @@ export default function ConfirmarCadastro() {
   const [valorPago, setValorPago] = useState("");
   const [exibirValorPago, setExibirValorPago] = useState(false);
   const router = useRouter();
-  const searchParams = useSearchParams();  // Utiliza useSearchParams para acessar os parâmetros da URL
-  const token = searchParams.get('token');
+  // const searchParams = useSearchParams();  // Utiliza useSearchParams para acessar os parâmetros da URL
+  // const token = searchParams.get('token');
   const [tokenData, setTokenData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<any>("");
@@ -93,6 +93,7 @@ export default function ConfirmarCadastro() {
 
 
   useEffect(() => {
+    const token = new URLSearchParams(window.location.search).get("token");
     if (token) {
       // Quando o token está disponível, faça a requisição para verificar o token
       const verifyToken = async () => {
@@ -155,7 +156,7 @@ export default function ConfirmarCadastro() {
     fetchAndProcessTXT();
 
 
-  }, [token]);
+  }, [router]);
 
   // if (loading) return <p>Carregando...</p>
   if (loading) return <LoadingSpinner />
