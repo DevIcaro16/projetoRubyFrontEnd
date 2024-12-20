@@ -704,80 +704,73 @@ export default function ConfirmarCadastro() {
 
 
 
-          <Modal
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-            className={styles.modalContent}
-          >
-            <h2 className={styles.h2}>Confirme seu Plano</h2>
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} className={styles.modalContent}>
+              {/* Adicionando o overlay */}
+              {isModalOpen && <div className={styles.modalOverlay}></div>}
 
-            <div className={styles.selectContainer}>
-              <div className={styles.dataContainer}>
-                <div className={styles.labelContainer}>
-                  <label className={styles.label}>Mês de Movimento Inicial </label>
-                  <InputDate
-                    initialValue={mesMovimentoInical}
-                    onDateChange={(date) => handleDateChange(date, 'inicio')}
-                  />
+              <h2 className={styles.h2}>Confirme seu Plano</h2>
+
+              <div className={styles.selectContainer}>
+                <div className={styles.dataContainer}>
+                  <div className={styles.labelContainer}>
+                    <label className={styles.label}>Mês de Movimento Inicial </label>
+                    <InputDate
+                      initialValue={mesMovimentoInical}
+                      onDateChange={(date) => handleDateChange(date, 'inicio')}
+                    />
+                  </div>
+
+                  <div className={styles.labelContainer}>
+                    <label className={styles.label}>Mês de Movimento Final </label>
+                    <InputDate
+                      initialValue={mesMovimentoFinal}
+                      onDateChange={(date) => handleDateChange(date, 'final')}
+                    />
+                  </div>
                 </div>
 
-                <div className={styles.labelContainer}>
-                  <label className={styles.label}>Mês de Movimento Final </label>
-                  <InputDate
-                    initialValue={mesMovimentoFinal}
-                    onDateChange={(date) => handleDateChange(date, 'final')}
-                  />
+                <label htmlFor="planSelect" className={styles.label}>Quantidade de Funcionários</label>
+                <div className={styles.calcContainer}>
+                  <select
+                    id="planSelect"
+                    className={styles.select}
+                    value={tipoPlano}
+                    onChange={handlePlanChange}
+                    required
+                  >
+                    <option value="00" defaultChecked>Selecione</option>
+                    <option value="05">5 Funcionários</option>
+                    <option value="10">10 Funcionários</option>
+                    <option value="20">20 Funcionários</option>
+                    <option value="40">40 Funcionários</option>
+                    <option value="80">80 Funcionários</option>
+                  </select>
                 </div>
-              </div>
 
-              <label htmlFor="planSelect" className={styles.label}>Quantidade de Funcionários</label>
-              <div className={styles.calcContainer}>
-                <select
-                  id="planSelect"
-                  className={styles.select}
-                  value={tipoPlano}
-                  onChange={handlePlanChange}
-                  required
+                <div
+                  className={styles.valorApagarContainer}
+                  style={{ display: exibirValorPago ? 'block' : 'none', flexDirection: "column" }}
                 >
-                  <option value="00" defaultChecked>Selecione</option>
-                  <option value="05">5 Funcionários</option>
-                  <option value="10">10 Funcionários</option>
-                  <option value="20">20 Funcionários</option>
-                  <option value="40">40 Funcionários</option>
-                  <option value="80">80 Funcionários</option>
-                </select>
-
-                
+                  <label className={styles.label}>Valor a Ser Pago</label><br />
+                  <input
+                    title="valorPago"
+                    type="text"
+                    value={valorPago}
+                    disabled
+                    className={styles.input2}
+                  />
+                </div>
               </div>
 
+              <button className={styles.calcButton} onClick={calcularValorPlano}>
+                Recalcular Valor
+              </button>
 
-              <div
-                className={styles.valorApagarContainer}
-                style={{ display: exibirValorPago ? 'block' : 'none', flexDirection: "column" }} // Controla a visibilidade
-              >
-                <label className={styles.label}>
-                  Valor a Ser Pago
-                </label><br />
-
-                <input
-                  title="valorPago"
-                  type="text"
-                  value={valorPago}
-                  disabled
-                  className={styles.input2}
-                />
-              </div>
-
-            </div>
-
-            <button className={styles.calcButton} onClick={calcularValorPlano}>
-                  Recalcular Valor
-                </button>
-
-            <button className={styles.confirmButton} onClick={handleConfirm}>
-              Confirmar Plano
-            </button>
+              <button className={styles.confirmButton} onClick={handleConfirm}>
+                Confirmar Plano
+              </button>
           </Modal>
+
 
         </>
       )}
