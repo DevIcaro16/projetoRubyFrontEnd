@@ -120,24 +120,31 @@
 
 .input2 {
   width: 100%;
-  height: 40px;
-  border: 1px solid var(--gray-100);
-  padding: 0px 16px;
-  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+  color: var(--text-color);
   background-color: var(--gray-200);
-  font-size: 18px;
 }
 
 .input3 {
   font-family: sans-serif;
   width: 205%;
-  height: 40px;
+  height: 50px;
   border: 1px solid var(--gray-100);
   padding: 0px 16px;
   border-radius: 8px;
   background-color: var(--gray-200);
   font-size: 18px;
   resize: none;
+  color: var(--error-color2);
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente (opcional) */
+  line-height: 48px;
 }
 
 .select {

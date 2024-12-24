@@ -289,6 +289,9 @@ export default function ConfirmarCadastro() {
 
       const { valorBase, taxaFUN, taxaFAT } = dadosPlano;
 
+      //taxaFUN -> 1.6
+      //taxaFAT -> 1.8
+
       let multiplicadorFuncionario = 1;
       let valorFinal = valorBase;
 
@@ -538,34 +541,9 @@ export default function ConfirmarCadastro() {
           <section className={styles.loginSection}>
             <h1 className={styles.h1}>Finalize seu Cadastro</h1>
             <form className={styles.loginForm} onSubmit={handleOpenModal}>
-              <div className={styles.fieldGroup}>
-                <label className={styles.label}>Empresa </label>
-                <input
-                  type="text"
-                  required
-                  name="emp"
-                  placeholder="Digite o Nome da Empresa"
-                  className={styles.input2}
-                  value={empresa}
-                  onChange={(e) => setEmpresa(e.target.value)}
-                  disabled
-                />
-              </div>
+              
+              
 
-
-              <div className={styles.fieldGroup}>
-                <label className={styles.label}>CNPJ </label>
-                <input
-                  type="text"
-                  name="cgc"
-                  placeholder="Digite o CNPJ da Empresa"
-                  maxLength={18}
-                  className={styles.input2}
-                  value={CNPJ}
-                  onChange={handleCNPJChange}
-                  disabled
-                />
-              </div>
 
               <div className={styles.fieldGroup}>
                 <label className={styles.label}>Nome / Razão Social</label>
@@ -591,6 +569,20 @@ export default function ConfirmarCadastro() {
                   onChange={(e) => setEndereco(e.target.value)}
                   required
                 /> */}
+              </div>
+
+              <div className={styles.fieldGroup}>
+                <label className={styles.label}>CNPJ </label>
+                <input
+                  type="text"
+                  name="cgc"
+                  placeholder="Digite o CNPJ da Empresa"
+                  maxLength={18}
+                  className={styles.input2}
+                  value={CNPJ}
+                  onChange={handleCNPJChange}
+                  disabled
+                />
               </div>
 
               <div className={styles.fieldGroup}>
@@ -696,6 +688,7 @@ export default function ConfirmarCadastro() {
                 />
               </div>
 
+              <div className={styles.fieldGroup}></div>
 
 
               <button className={styles.button} type="submit">
