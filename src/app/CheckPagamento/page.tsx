@@ -22,7 +22,7 @@ const CheckPagamento = () => {
                 <main className={styles.main}>
                     <h1 className={styles.title}>Pagamento Confirmado Com Sucesso!</h1>
                     <p className={styles.message}>
-                        Importe sua Linçenca no Seu RUBY - MicroFolha .
+                        Importe sua Lincença no Seu RUBY - MicroFolha .
                     </p>
                     <p className={styles.note}>
                         Se você não encontrar o e-mail em sua caixa de entrada, verifique a
